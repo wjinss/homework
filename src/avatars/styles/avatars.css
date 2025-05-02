@@ -1,1 +1,55 @@
-/* 여기에 스타일을 구현해 주세요 */
+html {
+  --greenCir: #4cfe88;
+  --greyCir: #dbdbdb;
+}
+.container {
+  max-width: 540px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 100px;
+}
+h2 {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 20px 0 10px;
+}
+/* 플렉스 */
+.flex_list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+/* 플로트 */
+.float_list {
+  li {
+    float: inline-start;
+  }
+}
+/* 리스트 스타일 */
+.avatar-list {
+  li {
+    padding: 10px;
+  }
+  .avatar {
+    position: relative;
+    img {
+      border-radius: 50%;
+    }
+    .state {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      border: 1px solid #fff;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+    .state[aria-label='오프라인'] {
+      background-color: var(--greyCir);
+    }
+    .state[aria-label='온라인'] {
+      background-color: var(--greenCir);
+    }
+  }
+}
