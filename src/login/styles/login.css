@@ -1,0 +1,156 @@
+/* CSS를 활용하여 레이아웃 및 스타일링을 완성해주세요 */
+:root {
+  --wh: #fff;
+  --mainColor: #03cf5d;
+  --borderColor: #dadada;
+  --textColor: #121212;
+  font-size: 16px;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border-width: 0;
+}
+input:focus {
+  border: 1px solid #24388d;
+}
+input:user-invalid + .error_message {
+  display: block;
+}
+.error_message {
+  color: red;
+  font-size: 0.75rem;
+  padding: 10px 20px 0;
+  display: none;
+}
+.login_wrapper {
+  margin: 0 auto;
+  min-width: 290px;
+  background: var(--wh);
+  padding: 0.9375rem;
+
+  @media (width>= 768px) {
+    width: 500px;
+  }
+
+  h1 {
+    text-align: center;
+  }
+  .logo {
+    padding: 3.4375rem 0 2.8125rem;
+
+    svg {
+      width: 230px;
+    }
+  }
+}
+.login_form {
+  width: 100%;
+  .login_input {
+    margin-bottom: 0.625rem;
+    color: var(--textColor);
+
+    input {
+      padding: 0.9375rem;
+      width: 100%;
+      outline: none;
+      background-color: var(--wh);
+      border: 1px solid var(--borderColor);
+      font-size: 0.875rem;
+      &:focus {
+        border: 1px solid var(--mainColor);
+        background: rgb(241 245 253);
+      }
+    }
+  }
+  .login_btn {
+    width: 100%;
+    border: none;
+    background-color: var(--mainColor);
+    margin: 0.625rem 0;
+    max-height: 2.8125rem;
+    padding: 0.875rem;
+    span {
+      display: inline-block;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--wh);
+    }
+  }
+  .login_stay {
+    --textColor: #333;
+
+    display: flow-root;
+    float: right;
+    height: 1.5rem;
+    @media (width>= 768px) {
+      display: flow-root;
+      float: left;
+    }
+    input {
+      appearance: none;
+      position: absolute;
+      margin: 0px;
+      padding-inline: 12px;
+      padding-block: 13px;
+    }
+    label {
+      cursor: pointer;
+      display: inline-block;
+      color: var(--textColor);
+      font-size: 1rem;
+      line-height: 1.5rem;
+    }
+    span {
+      margin-right: 0.25rem;
+      vertical-align: middle;
+      position: relative;
+      top: 2px;
+    }
+    input:checked + label .login_checked_fill {
+      fill: var(--mainColor);
+    }
+    input:checked + label .login_checked_boder {
+      fill: var(--wh);
+    }
+  }
+
+  .ip_security {
+    --textColor: #333;
+    font-size: 1rem;
+    display: none;
+    @media (width>= 768px) {
+      display: flow-root;
+      float: right;
+    }
+    .IP_on {
+      display: none;
+    }
+    input {
+      appearance: none;
+      position: absolute;
+      margin: 0px;
+      padding-inline: 20px;
+      padding-block: 10px;
+
+      &:checked + label .IP_on {
+        display: inline-block;
+        color: var(--mainColor);
+      }
+      &:checked + label .IP_off {
+        display: none;
+        color: var(--mainColor);
+      }
+    }
+    span {
+      font-weight: 700;
+    }
+  }
+}
