@@ -102,11 +102,12 @@ main {
     background-size: cover;
     transition: all 0.3s ease-in-out;
 
-    &:hover {
+    /* 애플 스토어 ui hover 이펙트 */
+    /* &:hover {
       scale: 1.01;
       border-radius: 15px;
       box-shadow: 2px 4px 12px #00000014;
-    }
+    } */
 
     @media (width > 1024px) {
       /* padding-block-start: var(--extra-large-spacing); */
