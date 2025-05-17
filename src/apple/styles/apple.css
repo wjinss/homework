@@ -43,6 +43,7 @@ header {
     gap: 20px;
 
     button {
+      cursor: pointer;
       margin: 0;
       padding: 0;
       background: transparent;
@@ -224,6 +225,11 @@ main {
     border-radius: 50px;
     font-size: var(--xx-small-text);
     line-height: 1.5;
+    box-sizing: border-box;
+
+    &:focus-visible {
+      outline: 1px solid var(--blue-400);
+    }
 
     &:first-of-type {
       margin-inline-end: var(--base-spacing);
@@ -245,7 +251,7 @@ main {
       }
     }
     .btn-stroke {
-      outline: 1px solid var(--black);
+      border: 1px solid var(--black);
       &:hover {
         background: var(--black-100);
         color: var(--white);
@@ -262,7 +268,7 @@ main {
       }
     }
     .btn-stroke {
-      outline: 1px solid var(--blue-200);
+      border: 1px solid var(--blue-200);
       &:hover {
         background: var(--blue-400);
       }
