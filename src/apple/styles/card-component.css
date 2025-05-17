@@ -1,3 +1,11 @@
-@import "./reset.css";
-@import "./theme.css";
-@import "./base.css";
+@import './reset.css';
+@import './theme.css';
+@import './base.css';
+
+section {
+  text-align: center;
+
+  .btn {
+    display: inline-block;
+  }
+}
